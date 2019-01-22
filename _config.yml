@@ -1,42 +1,95 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Site settings 配置站点
+title: '郭义臣的博客'
+description: '分享一些有意思的东西'
+keyword: '郭义臣 GitHub 博客 HFUTer C/C++ 嵌入式开发 python 深度学习'
+url: 'https://gycblog.xyz' # your host
 
-# Site settings
-title:            jekyllDecent
-subtitle:         Example Blog
-description:      This is the jekyllTheme example blog. It only exists to demonstrate how the theme looks and feels.
-keywords:         demo theme example github jekyll features
-language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
+# if you don't need baseurl, you should leave this value blank.
+baseurl: ''
 
-baseurl:          "/jekyllDecent" # the subpath of your site, e.g. /blog
-url:              "" # the base hostname & protocol for your site. Have a look at robots.txt as well!
-permalink:        /blog/:categories/:title
-cover:            /assets/mountain-cover.jpg
-disqus_shortname: "jekylldecent"
+# Navigation links
+nav:
+  home: '/'
+  tags: '/tags.html'
+
+# Footer
+footer:
+  since: 2017
+
+# Author 配置博主信息
+author: '郭义臣 | HFUTer'
+nickname: '锟斤拷'
+bio: '独立思考 热爱生活'
+avatar: '/assets/img/profile.jpg'
+
+# Search
+search: true
+
+# Night mode
+nightMode: false
+
+# Global comments setting
+comments: true
+
+# Comments 评论功能
+comments:
+  disqus: true
+  disqus_url: 'https://chasorg.github.io/embed.js'
+
+livere: true
+livere_uid: MTAyMC8zODgxNi8xNTM0NA==
+
+# Reward 赞赏功能 by Ray-Eldath
+reward:
+  enable: true
+  reward_comment: '真诚赞赏 手有余香'
+  wechatpay: '/assets/img/wechat.png'
+  alipay: '/assets/img/alipay.jpg'
+
+# b2t 回到顶部 by Ray-Eldath
+b2t: true
+
+# MathJax 公式支持
+mathjax: true
+
+# Share
+social-share: true
+social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+
+# theme color 主题皮肤
+theme-color: 'default'  # pink or default
+
+# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
+postPatterns: 'circuitBoard'
+
+# SNS settings 配置社交网站
+# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
+sns:
+  email: 'mailto:chasorg2778@163.com'
+  zhihu: '//zhihu.com/people/chasorg/activities'
+  github: '//github.com/ChasorG'
+
+# Tags 设置标签
+recommend-tags: true # whether or not display recommend-tags on the sidebar
+recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
 
 # Build settings
-sass:
-    style: compressed
-markdown: kramdown
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
-include: ['_pages']
-exclude: [vendor, "developer-tools"]
-plugins:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-redirect-from
+paginate: 5
+paginate_path: 'page:num'
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
 
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  ignore:
-    envs: [local]
-  blanklines: true
-  startings: [head, body]
+# Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+# RSS
+RSS: true
+
+# Permalink
+# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
+permalink: /:year/:month/:day/:title.html
+
+# Plugins
+plugins: [jekyll-paginate]
