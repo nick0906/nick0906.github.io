@@ -1,30 +1,53 @@
-# Site settings
-title: Grayscale
-email: your-email@domain.com
-url: https://example.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "username.github.io" # the base hostname & protocol for your site.
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary-dark: '#000000'
-  links: '#219ab3'
+paginate: 6 #articles per page
+paginate_path: /blog/page:num #makes pagination working
 
-# Footer settings
-footer: Your Website
+# header text
+title: Your awesome site name :)
+header: Write something about you here...
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+# for welcome page
+# to replace image go to index.html
+email:
+  address: "user@example.com"
+  text: "user (at) example.com"
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+# disqus comment
+disqus:
+    shortname: "test" #your disqus comment short name
+
+# google analytics
+google:
+    tracking-id: "" #your tracking id here
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
+
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+
+permalink: /posts/:title
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

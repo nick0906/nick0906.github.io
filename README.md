@@ -1,13 +1,22 @@
-Grayscale Jekyll theme
-=========================
+# Autm-rb
 
-Jekyll theme based on [Grayscale bootstrap theme ](http://ironsummitmedia.github.io/startbootstrap-grayscale/)
+Another theme for jekyll.
 
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.github.io/grayscale-theme)
+## [DEMO][demo]
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/grayscale-theme/master/screenshot.png)
+## Customization
 
-=========
-For more details, read the [documentation](http://jekyllrb.com/)
+Edit **_config.yml** and files inside **_data/** before using
+
+## Screens
+
+![](screenshots/home.png)
+![](screenshots/post.png)
+
+## Licensing
+
+[MIT](https://github.com/railsr/autm-rb/blob/master/LICENSE)
+
+[pages]: http://pages.github.com
+[fork]: https://github.com/railsr/autm-rb/fork
+[demo]: http://kirqe.github.io/autm-rb/
