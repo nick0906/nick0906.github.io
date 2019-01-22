@@ -1,53 +1,42 @@
-baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "username.github.io" # the base hostname & protocol for your site.
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-paginate: 6 #articles per page
-paginate_path: /blog/page:num #makes pagination working
+# Site settings
+title:            jekyllDecent
+subtitle:         Example Blog
+description:      This is the jekyllTheme example blog. It only exists to demonstrate how the theme looks and feels.
+keywords:         demo theme example github jekyll features
+language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
 
-# header text
-title: Your awesome site name :)
-header: Write something about you here...
+baseurl:          "/jekyllDecent" # the subpath of your site, e.g. /blog
+url:              "" # the base hostname & protocol for your site. Have a look at robots.txt as well!
+permalink:        /blog/:categories/:title
+cover:            /assets/mountain-cover.jpg
+disqus_shortname: "jekylldecent"
 
-# for welcome page
-# to replace image go to index.html
-email:
-  address: "user@example.com"
-  text: "user (at) example.com"
-
-# disqus comment
-disqus:
-    shortname: "test" #your disqus comment short name
-
-# google analytics
-google:
-    tracking-id: "" #your tracking id here
-
-gems:
+# Build settings
+sass:
+    style: compressed
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+include: ['_pages']
+exclude: [vendor, "developer-tools"]
+plugins:
+  - jekyll-mentions
+  - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
-  - jemoji
+  - jekyll-redirect-from
 
-# This is used by feed.xml. Uncomment if you want to use it.
-# description: "..."
-
-exclude:
-  - "README.md"
-  - "CHANGELOG.md"
-  - "Gemfile"
-  - "Gemfile.lock"
-
-permalink: /posts/:title
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  ignore:
+    envs: [local]
+  blanklines: true
+  startings: [head, body]
