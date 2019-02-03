@@ -1,30 +1,95 @@
-# Site settings
-title: Grayscale
-email: your-email@domain.com
-url: https://example.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+# Site settings 配置站点
+title: 'nick0906的博客'
+description: '分享一些有意思的东西'
+keyword: 'nick0906 GitHub 博客 C/C++ 深度学习'
+url: 'https://nick0906.github.io' # your host
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary-dark: '#000000'
-  links: '#219ab3'
+# if you don't need baseurl, you should leave this value blank.
+baseurl: ''
 
-# Footer settings
-footer: Your Website
+# Navigation links
+nav:
+  home: '/'
+  tags: '/tags.html'
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+# Footer
+footer:
+  since: 2019
+
+# Author 配置博主信息
+author: '张义卓 | nick0906'
+nickname: '桌子'
+bio: '天道酬勤 得过且过'
+avatar: '/assets/img/profile.jpg'
+
+# Search
+search: true
+
+# Night mode
+nightMode: false
+
+# Global comments setting
+comments: true
+
+# Comments 评论功能
+comments:
+  disqus: true
+  disqus_url: 'https://nick0906.github.io'
+
+livere: true
+livere_uid: MTAyMC8zODgxNi8xNTM0NA==
+
+# Reward 赞赏功能 by Ray-Eldath
+reward:
+  enable: true
+  reward_comment: '真诚赞赏 手有余香'
+  wechatpay: '/assets/img/wechat.png'
+  alipay: '/assets/img/alipay.jpg'
+
+# b2t 回到顶部 by Ray-Eldath
+b2t: true
+
+# MathJax 公式支持
+mathjax: true
+
+# Share
+social-share: true
+social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+
+# theme color 主题皮肤
+theme-color: 'default'  # pink or default
+
+# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
+postPatterns: 'circuitBoard'
+
+# SNS settings 配置社交网站
+# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
+sns:
+  email: 'nick_zhang.qd@foxmail.com'
+  zhihu: '//zhihu.com/people/80caa2430897f0daa403eea79eaa01fe'
+  github: '//https://nick0906.github.io'
+
+# Tags 设置标签
+recommend-tags: true # whether or not display recommend-tags on the sidebar
+recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
 
 # Build settings
+paginate: 5
+paginate_path: 'page:num'
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
+
+# Markdown
 markdown: kramdown
-permalink: pretty
+highlighter: rouge
+kramdown:
+  input: GFM
+
+# RSS
+RSS: true
+
+# Permalink
+# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
+permalink: /:year/:month/:day/:title.html
+
+# Plugins
+plugins: [jekyll-paginate]
